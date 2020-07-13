@@ -1,6 +1,8 @@
 "use script";
 
-let chooseYourCountry = prompt("укажите свою страну для отправки товара");
+const chooseYourCountry = prompt("укажите свою страну для отправки товара");
+
+const normalizedForCountry = chooseYourCountry.toLowerCase();
 
 const priceChina = 100;
 const priceChile = 250;
@@ -13,31 +15,35 @@ const australia = "australia";
 const india = "india";
 const jamaica = "jamaica";
 
-let result;
-
-switch (chooseYourCountry) {
+switch (normalizedForCountry) {
   case china:
-    result = `Доставка в ${china} будет стоить ${priceChina} кредитов`;
+    console.log(`Доставка в ${china} будет стоить ${priceChina} кредитов`);
     break;
 
   case chile:
-    result = `Доставка в ${chile} будет стоить ${priceChile} кредитов`;
+    console.log(`Доставка в ${chile} будет стоить ${priceChile} кредитов`);
     break;
 
   case australia:
-    result = `Доставка в ${australia} будет стоить ${priceAustralia} кредитов`;
+    console.log(
+      `Доставка в ${australia} будет стоить ${priceAustralia} кредитов`
+    );
     break;
 
   case india:
-    result = `Доставка в ${india} будет стоить ${priceIndia} кредитов`;
+    console.log(`Доставка в ${india} будет стоить ${priceIndia} кредитов`);
     break;
 
   case jamaica:
-    result = `Доставка в ${jamaica} будет стоить ${priceJamaica} кредитов`;
+    console.log(`Доставка в ${jamaica} будет стоить ${priceJamaica} кредитов`);
     break;
 
   default:
-    alert("В вашей стране доставка не доступна");
+    do {
+      if (normalizedForCountry === null) {
+        break;
+      } else {
+        alert("В вашей стране доставка не доступна");
+      }
+    } while ("");
 }
-
-console.log(result);

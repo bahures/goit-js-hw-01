@@ -9,7 +9,14 @@ do {
   }
 
   input = Number(input);
+
+  const isThisANumber = Number.isNaN(input);
+  if (isThisANumber) {
+    alert("было введено не число, попробуйте еще раз");
+    continue;
+  }
+
   total += input;
 } while (true);
 
-console.log(`Общая сумма ${total}`);
+alert(`Общая сумма чисел равна ${total}`);
