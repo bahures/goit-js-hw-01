@@ -3,12 +3,8 @@
 const chooseYourCountry = prompt("укажите свою страну для отправки товара");
 
 const normalizedForCountry = chooseYourCountry.toLowerCase();
+let price = 0;
 
-const priceChina = 100;
-const priceChile = 250;
-const priceAustralia = 170;
-const priceIndia = 80;
-const priceJamaica = 120;
 const china = "china";
 const chile = "chile";
 const australia = "australia";
@@ -17,25 +13,28 @@ const jamaica = "jamaica";
 
 switch (normalizedForCountry) {
   case china:
-    console.log(`Доставка в ${china} будет стоить ${priceChina} кредитов`);
+    price = 100;
+    console.log(`Доставка в ${china} будет стоить ${price} кредитов`);
     break;
 
   case chile:
-    console.log(`Доставка в ${chile} будет стоить ${priceChile} кредитов`);
+    price = 250;
+    console.log(`Доставка в ${chile} будет стоить ${price} кредитов`);
     break;
 
   case australia:
-    console.log(
-      `Доставка в ${australia} будет стоить ${priceAustralia} кредитов`
-    );
+    price = 170;
+    console.log(`Доставка в ${australia} будет стоить ${price} кредитов`);
     break;
 
   case india:
-    console.log(`Доставка в ${india} будет стоить ${priceIndia} кредитов`);
+    price = 80;
+    console.log(`Доставка в ${india} будет стоить ${price} кредитов`);
     break;
 
   case jamaica:
-    console.log(`Доставка в ${jamaica} будет стоить ${priceJamaica} кредитов`);
+    price = 120;
+    console.log(`Доставка в ${jamaica} будет стоить ${price} кредитов`);
     break;
 
   default:
