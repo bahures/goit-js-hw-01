@@ -1,6 +1,10 @@
 "use script";
 
-const chooseYourCountry = prompt("укажите свою страну для отправки товара");
+let chooseYourCountry = prompt("укажите свою страну для отправки товара");
+
+if (chooseYourCountry === null) {
+  alert("отменено пользователем");
+}
 
 const china = "china";
 const chile = "chile";
@@ -13,7 +17,7 @@ const priceToAustralia = 170;
 const priceToIndia = 80;
 const priceToJamaica = 120;
 
-switch (chooseYourCountry.toLowerCase()) {
+switch (chooseYourCountry) {
   case china:
     console.log(`Доставка в ${china} будет стоить ${priceToChina} кредитов`);
     break;
